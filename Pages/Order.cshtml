@@ -1,0 +1,52 @@
+@page
+
+
+@model RazorPage.Models.OrderPage
+@{
+    Layout = null;
+}
+
+
+<h1>@ViewData["Title"]</h1>
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>OrderForm</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+
+
+
+<body> 
+
+    <h5 class="bg-primary text-white text-center m-2 p-2">Order</h5>
+     <form asp-action="Order" method="post" class="m-2">
+        <div asp-validation-summary="All"></div>
+        <div class="form-group">
+            <label asp-for="Name">Your name:</label>
+            <input asp-for="Name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Phone">Your phone:</label>
+            <input asp-for="Phone" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Address">Your address:</label>
+            <input asp-for="Address" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>What do you want to order?</label>
+            <select asp-for="Item" class="form-control">
+                <option value="">What do you want to order?: </option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Form</button>
+    </form>
+    
+</body> 
+</html>

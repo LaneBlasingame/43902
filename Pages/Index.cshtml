@@ -1,0 +1,24 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    <title>Index</title>
+</head>
+
+<html>
+    <body>
+        <div class="text-center">
+            <h1 class="display-4">Grocery Delivery Store Application</h1>
+            <h2>Order Groceries Online!</h2> 
+             <a class="nav-link text-dark" asp-area="" asp-page="/Delivery">Delivery</a>
+             <a class="nav-link text-dark" asp-area="" asp-page="/Order">Order</a>            
+        </div>
+    </body>
+</html>
